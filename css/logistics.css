@@ -1,0 +1,516 @@
+/*===========================================================
+ * LOGISTIC.CSS - ESTILOS ESPECÍFICOS PARA PÁGINA DE LOGÍSTICA
+ * 
+ * ÍNDICE:
+ * 1. HERO ESPECÍFICO
+ * 2. SECCIÓN DE INTRODUCCIÓN
+ * 3. FLIP-CARDS
+ * 4. CASOS DE ÉXITO
+ * 5. TECNOLOGÍA
+ * 6. CALL TO ACTION
+ * 7. CONTACTO
+ * 8. MEDIA QUERIES ESPECÍFICAS
+ *===========================================================*/
+
+/*===========================================================
+ * 1. HERO ESPECÍFICO
+ *===========================================================*/
+.hero.hero-logistic {
+    background: url('/img/view3.jpg') no-repeat center center/cover;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.hero.hero-logistic h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.hero.hero-logistic p {
+    font-size: 1.5rem;
+    max-width: 80%;
+    margin: 15px auto 0;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/*===========================================================
+ * 2. SECCIÓN DE INTRODUCCIÓN
+ *===========================================================*/
+.about-text {
+    text-align: left;
+}
+
+.about-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    color: #555;
+}
+
+/* Estilo para caja de ventajas */
+.about-text div[style*="background-color: #f5f5f5"] {
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.about-text div[style*="background-color: #f5f5f5"] h3 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 1.2rem;
+}
+
+.about-text div[style*="background-color: #f5f5f5"] ul {
+    list-style-type: none;
+}
+
+.about-text div[style*="background-color: #f5f5f5"] li {
+    margin-bottom: 12px;
+    padding-left: 30px;
+    position: relative;
+    line-height: 1.5;
+}
+
+.about-text div[style*="background-color: #f5f5f5"] li span[style*="color: #ffcc00"] {
+    position: absolute;
+    left: 0;
+    top: 2px;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.about-text div[style*="background-color: #f5f5f5"] strong {
+    color: #222;
+}
+
+/*===========================================================
+ * 3. FLIP-CARDS
+ *===========================================================*/
+.flip-card {
+    background-color: transparent;
+    width: 280px;
+    height: 380px;
+    perspective: 1000px;
+    margin: 15px;
+    border-radius: 10px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    border-radius: 10px;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.flip-card-front {
+    background-color: #bbb;
+    color: white;
+}
+
+.flip-card-back {
+    background-color: #333;
+    color: white;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+}
+
+.flip-card-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.flip-card-front div[style*="background-color: rgba(0,0,0,0.7)"] {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0.4), transparent);
+    padding: 15px;
+}
+
+.flip-card-front h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.flip-card-back h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+
+.flip-card-back ul {
+    text-align: left;
+    list-style-type: none;
+    padding-left: 5px;
+    margin: 0;
+}
+
+.flip-card-back li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.flip-card-back li span {
+    color: var(--primary-color);
+    margin-right: 10px;
+}
+
+/*===========================================================
+ * 4. CASOS DE ÉXITO
+ *===========================================================*/
+.about-section[style*="background-color: #f9f9f9"] .about-text {
+    text-align: center;
+}
+
+.about-section[style*="background-color: #f9f9f9"] .divider {
+    margin: 0 auto 30px;
+}
+
+.about-section[style*="background-color: #f9f9f9"] div[style*="display: flex; margin-bottom: 40px"] {
+    display: flex;
+    margin-bottom: 40px;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.about-section[style*="background-color: #f9f9f9"] div[style*="display: flex; margin-bottom: 40px"]:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+.about-section[style*="background-color: #f9f9f9"] div[style*="flex: 1; padding: 30px"] {
+    flex: 1;
+    padding: 30px;
+}
+
+.about-section[style*="background-color: #f9f9f9"] div[style*="flex: 1; padding: 30px"] h3 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.about-section[style*="background-color: #f9f9f9"] div[style*="flex: 1; padding: 30px"] p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+    color: #555;
+}
+
+.about-section[style*="background-color: #f9f9f9"] div[style*="flex: 1; padding: 30px"] strong {
+    font-weight: bold;
+    color: #333;
+}
+
+.about-section[style*="background-color: #f9f9f9"] div[style*="flex: 1"] {
+    flex: 1;
+}
+
+.about-section[style*="background-color: #f9f9f9"] div[style*="flex: 1"] img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*===========================================================
+ * 5. TECNOLOGÍA
+ *===========================================================*/
+.about-section[style*="background-color: #fff"] .about-text {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.about-section[style*="background-color: #fff"] div[style*="display: flex; flex-wrap: wrap"] {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.about-section[style*="background-color: #fff"] div[style*="flex: 1; min-width: 300px"] {
+    flex: 1;
+    min-width: 300px;
+    margin: 15px;
+    padding: 25px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.about-section[style*="background-color: #fff"] div[style*="flex: 1; min-width: 300px"]:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+.about-section[style*="background-color: #fff"] div[style*="flex: 1; min-width: 300px"] h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.about-section[style*="background-color: #fff"] div[style*="flex: 1; min-width: 300px"] p {
+    color: #555;
+    line-height: 1.6;
+}
+
+/*===========================================================
+ * 6. CALL TO ACTION
+ *===========================================================*/
+section[style*="background-color: #ffcc00"] {
+    background-color: var(--primary-color) !important;
+    padding: 60px 20px;
+    text-align: center;
+    color: #333;
+}
+
+section[style*="background-color: #ffcc00"] div[style*="max-width: 800px"] {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+section[style*="background-color: #ffcc00"] h2[style*="font-size: 36px"] {
+    font-size: 36px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+section[style*="background-color: #ffcc00"] p[style*="font-size: 18px"] {
+    font-size: 18px;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+section[style*="background-color: #ffcc00"] a[style*="display: inline-block"] {
+    display: inline-block;
+    background-color: #333;
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-decoration: none;
+}
+
+section[style*="background-color: #ffcc00"] a[style*="display: inline-block"]:hover {
+    background-color: #222;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/*===========================================================
+ * 7. CONTACTO
+ *===========================================================*/
+section#contact {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+}
+
+section#contact div[style*="max-width: 1200px"] {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+section#contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+section#contact .divider {
+    width: 80px;
+    height: 3px;
+    background-color: var(--primary-color);
+    margin: 0 auto 40px;
+}
+
+section#contact div[style*="display: flex; flex-wrap: wrap"] {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    align-items: center;
+}
+
+section#contact div[style*="flex: 1; min-width: 300px; max-width: 500px; background-color: #fff"] {
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+section#contact img[alt="WhatsApp Business"] {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+section#contact h3[style*="font-size: 28px"] {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+section#contact p[style*="font-size: 18px"] {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #666;
+    line-height: 1.6;
+}
+
+section#contact div[style*="background-color: #25D366"] {
+    background-color: #25D366;
+    padding: 15px 25px;
+    border-radius: 50px;
+    display: inline-block;
+    margin-bottom: 30px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+section#contact div[style*="background-color: #25D366"]:hover {
+    background-color: #128C7E;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
+section#contact a[style*="color: white"] {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+section#contact p[style*="font-size: 16px"] {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 0;
+}
+
+/* Información de contacto */
+section#contact div[style*="flex: 1; min-width: 300px; max-width: 500px"] {
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+}
+
+section#contact div[style*="background-color: #f5f5f5; padding: 30px"] {
+    background-color: #f5f5f5;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: left;
+}
+
+section#contact h3[style*="margin-bottom: 20px"] {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+section#contact div[style*="margin-bottom: 20px; display: flex"] {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+section#contact div[style*="min-width: 24px; text-align: center"] {
+    min-width: 24px;
+    text-align: center;
+}
+
+section#contact div[style*="min-width: 24px; text-align: center"] img {
+    width: 24px;
+    height: 24px;
+}
+
+section#contact div[style*="margin-bottom: 20px; display: flex"] p {
+    margin: 0;
+    color: #555;
+    line-height: 1.5;
+}
+
+section#contact div[style*="margin-bottom: 20px; display: flex"] p:first-child {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+/*===========================================================
+ * 8. MEDIA QUERIES ESPECÍFICAS
+ *===========================================================*/
+@media (max-width: 768px) {
+    .hero.hero-logistic h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero.hero-logistic p {
+        font-size: 1.1rem;
+    }
+    
+    .about-section[style*="background-color: #f9f9f9"] div[style*="display: flex; margin-bottom: 40px"] {
+        flex-direction: column;
+    }
+    
+    .about-section[style*="background-color: #f9f9f9"] div[style*="flex: 1"] img {
+        height: 250px;
+    }
+    
+    section#contact div[style*="display: flex; flex-wrap: wrap"] {
+        flex-direction: column;
+    }
+    
+    section#contact div[style*="flex: 1; min-width: 300px; max-width: 500px; background-color: #fff"],
+    section#contact div[style*="flex: 1; min-width: 300px; max-width: 500px"] {
+        max-width: 100%;
+    }
+    
+    .about-section[style*="background-color: #fff"] div[style*="flex: 1; min-width: 300px"] {
+        min-width: 100%;
+        margin: 15px 0;
+    }
+}

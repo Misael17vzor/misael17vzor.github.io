@@ -1,50 +1,40 @@
-// Script para la rotación automática de pestañas
-const tabs = document.querySelectorAll('.tab-button');
-const tabPanes = document.querySelectorAll('.tab-pane');
-let currentTab = 0;
-let interval;
+document.addEventListener("DOMContentLoaded", function () {
+  // Tabs MVV (Misión, Visión, Valores)
+    const tabButtons = document.querySelectorAll(".tab-button");
+    const tabPanes = document.querySelectorAll(".tab-pane");
+    let currentTabIndex = 0;
 
-function showTab(index) {
-    // Oculta todas las pestañas
-    tabPanes.forEach(pane => pane.classList.remove('active'));
-    tabs.forEach(tab => tab.classList.remove('active'));
+    function showTab(index) {
+        tabButtons.forEach((btn) => btn.classList.remove("active"));
+        tabPanes.forEach((pane) => pane.classList.remove("active"));
 
-    // Muestra la pestaña seleccionada
-    tabPanes[index].classList.add('active');
-    tabs[index].classList.add('active');
+        tabButtons[index].classList.add("active");
+        tabPanes[index].classList.add("active");
 
-    // Reinicia la animación de la barra de progreso
-    const progressBar = tabs[index].querySelector('.progress-bar');
-    progressBar.style.width = '0';
-    setTimeout(() => {
-        progressBar.style.width = '100%';
-    }, 10);
-}
+        // Reiniciar la animación de la barra de progreso
+        const progressBar = tabButtons[index].querySelector(".progress-bar");
+        progressBar.style.width = "0";
+        setTimeout(() => {
+        progressBar.style.width = "100%";
+        }, 10);
 
-function nextTab() {
-    currentTab = (currentTab + 1) % tabs.length;
-    showTab(currentTab);
-}
+        currentTabIndex = index;
+    }
 
-// Inicia la rotación automática
-function startRotation() {
-    interval = setInterval(nextTab, 5000); // Cambia cada 5 segundos
-}
-
-// Detiene la rotación automática
-function stopRotation() {
-    clearInterval(interval);
-}
-
-// Eventos para los botones de pestaña
-tabs.forEach((tab, index) => {
-    tab.addEventListener('click', () => {
-        stopRotation();
+    tabButtons.forEach((button, index) => {
+        button.addEventListener("click", function () {
         showTab(index);
-        startRotation();
+        // Reiniciar el temporizador al hacer clic
+        clearInterval(tabInterval);
+        tabInterval = setInterval(rotateTabs, 5000);
+        });
     });
-});
 
-// Inicia la rotación automática al cargar la página
-startRotation();
+    function rotateTabs() {
+        currentTabIndex = (currentTabIndex + 1) % tabButtons.length;
+        showTab(currentTabIndex);
+    }
 
+    // Cambio automático de pestañas
+    let tabInterval = setInterval(rotateTabs, 5000);
+    });

@@ -4,8 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Logistica y Transporte</title>
-    <link rel="stylesheet" href="/css/css.css">
+    <title>Soluciones Logísticas - ROC'S Servicios Mineros</title>
+    <!-- <link rel="stylesheet" href="/css/css.css"> -->
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/logistics.css">
 </head>
 
 <header>
@@ -21,10 +23,10 @@
         </button>
         <nav class="main-nav">
             <ul>
-                <li><a href="/index.html" class="active">Inicio</a></li>
+                <li><a href="/index.html">Inicio</a></li>
                 <li><a href="/extractionproduction.html">Extracción</a></li>
                 <li><a href="/procesamiento.html">Procesamiento de Minerales</a></li>
-                <li><a href="/logistic.html">Logística y Transporte</a></li>
+                <li><a href="/logistic.html" class="active">Logística y Transporte</a></li>
                 <li><a href="/minerals.html">Comercialización y Venta de Minerales</a></li>
             </ul>
         </nav>
@@ -33,108 +35,303 @@
 
 <body>
     <section class="hero hero-logistic">
-        <div class="hero-logistic">
-            <h1>LOGÍSTICA MINERA</h1>
-            <p>SOLUCIONES LOGÍSTICAS PARA LA INDUSTRIA MINERA</p>
-            
+        <div class="hero-content">
+            <h1>SOLUCIONES LOGÍSTICAS INTEGRALES</h1>
+            <p>OPTIMIZAMOS SU CADENA DE SUMINISTRO MINERO</p>
         </div>
     </section>
+
+    <!-- Sección de introducción con enfoque en beneficios -->
     <section class="about-section">
         <div class="about-content">
             <div class="about-text">
-                <p> Servicios logísticos para tus proyectos de minería, transporte de minerales energéticos, metálicos y no
-                    metálicos como plata, cobre, plomo, zinc, aluminio o carbón, maquinaria como excavadoras, perforadoras,
-                    grúas y camiones mineros, herramientas y repuestos entre otros.</p>
-                <p>Obtén servicios logísticos especializados en el sector de la minería. Cuéntanos tu proyecto y hallaremos
-                    la mejor solución para tus importaciones o exportaciones de materiales relativos a la industria minera.
-                </p>
-                <h2>Información General</h2>
-                <p>Nuestra operación logística está diseñada para garantizar la eficiencia y seguridad en el transporte
-                    de
-                    minerales desde las minas hasta los puntos de distribución o clientes finales. Gestionamos tanto
-                    logística
-                    interna como externalizada, dependiendo de las necesidades específicas de cada proyecto.</p>
-                <h3>Objetivos de la Logística</h3>
-                <ul>
-                    <li><strong>Eficiencia:</strong> Reducir tiempos de entrega y costos operativos.</li>
-                    <li><strong>Seguridad:</strong> Garantizar la integridad de los trabajadores, los equipos y los
-                        materiales
-                        transportados.</li>
-                    <li><strong>Sostenibilidad:</strong> Minimizar el impacto ambiental de nuestras operaciones
-                        logísticas.</li>
-                    <li><strong>Trazabilidad:</strong> Asegurar que los envíos sean rastreables en todo momento.</li>
-                </ul>
-                <h3>Mapa de Operaciones</h3>
-                <p>Explora nuestro mapa interactivo para ver la ubicación de nuestras minas, rutas principales de
-                    transporte y
-                    centros de distribución clave.</p>
-                <!-- Aquí puedes integrar un mapa interactivo -->
-                <div id="map" style="height: 400px;"></div>
+                <h2>Transformamos desafíos logísticos en ventajas competitivas</h2>
+                <p>En <strong>ROC'S Servicios Mineros</strong>, no solo transportamos minerales; diseñamos soluciones logísticas que maximizan su eficiencia operativa y reducen costos. Nuestro enfoque personalizado asegura que cada tonelada de material llegue a su destino en tiempo óptimo, manteniendo la integridad de sus activos y minimizando riesgos.</p>
+                
+                <div style="background-color: #f5f5f5; padding: 20px; border-radius: 15px; margin: 30px 0;">
+                    <h3 style="color: #333; margin-bottom: 15px;">Ventajas competitivas:</h3>
+                    <ul style="list-style-type: none; padding-left: 0;">
+                        <li style="margin-bottom: 10px; padding-left: 30px; position: relative;">
+                            <span style="position: absolute; left: 0; top: 2px; color: #ffcc00; font-weight: bold;">✓</span>
+                            <strong>Reducción de costos operativos</strong> de hasta un 23% mediante optimización de rutas
+                        </li>
+                        <li style="margin-bottom: 10px; padding-left: 30px; position: relative;">
+                            <span style="position: absolute; left: 0; top: 2px; color: #ffcc00; font-weight: bold;">✓</span>
+                            <strong>Seguimiento en tiempo real</strong> con nuestra plataforma digital propietaria
+                        </li>
+                        <li style="margin-bottom: 10px; padding-left: 30px; position: relative;">
+                            <span style="position: absolute; left: 0; top: 2px; color: #ffcc00; font-weight: bold;">✓</span>
+                            <strong>Integración multimodal</strong> para optimizar costos y tiempos de entrega
+                        </li>
+                        <li style="margin-bottom: 10px; padding-left: 30px; position: relative;">
+                            <span style="position: absolute; left: 0; top: 2px; color: #ffcc00; font-weight: bold;">✓</span>
+                            <strong>Cumplimiento normativo garantizado</strong> en todas las jurisdicciones
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
 
+    <!-- Sección de servicios específicos con flip cards -->
+    <section class="about-section" style="background-color: #fff;">
+        <div class="about-content">
+            <div class="about-text" style="text-align: center;">
+                <h2>NUESTRAS SOLUCIONES LOGÍSTICAS</h2>
+                <div class="divider"></div>
+            </div>
+        </div>
+        
+        <!-- Contenedor para las flip cards -->
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin-top: 30px; max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+            
+            <!-- Flip Card 1: Transporte Terrestre -->
+            <div class="flip-card" style="border-radius:10px">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="/img/volteo.jpg" alt="Transporte Terrestre" style="width:100%;height:100%;object-fit:cover;border-radius:10px">
+                        <div style="position: absolute; bottom: 0; left: 0; right: 0; background-color: rgba(0, 0, 0, 0.356); color: white; padding: 2px;border-radius:10px">
+                            <h3>Transporte Terrestre Especializado</h3>
+                        </div>
+                    </div>
+                    <div class="flip-card-back" style="padding: 5px; background-color: #333; color: white; display: flex; flex-direction: column; justify-content: center;border-radius:10px">
+                        <h3 style="margin-bottom: 15px; color: #ffcc00;">Transporte Terrestre</h3>
+                        <ul style="text-align: left; list-style-type: none; padding-left: 5px;padding-right: 5px;">
+                            <li style="margin-bottom: 10px; display: flex; align-items: flex-start;">
+                                <span style="color: #ffcc00; margin-right: 10px;">✓</span>
+                                Flota de última generación con capacidad de hasta 60 toneladas
+                            </li>
+                            <li style="margin-bottom: 10px; display: flex; align-items: flex-start;">
+                                <span style="color: #ffcc00; margin-right: 10px;">✓</span>
+                                Sistemas anti-volcadura y monitoreo satelital
+                            </li>
+                            <li style="margin-bottom: 10px; display: flex; align-items: flex-start;">
+                                <span style="color: #ffcc00; margin-right: 10px;">✓</span>
+                                Conductores certificados en manejo de materiales especializados
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Flip Card 2: Ferrocarril -->
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="/img/trencarga.jpg" alt="Ferrocarril" style="width:100%;height:100%;object-fit:cover;">
+                        <div style="position: absolute; bottom: 0; left: 0; right: 0; background-color: rgba(0,0,0,0.7); color: white; padding: 15px;">
+                            <h3>Soluciones Ferroviarias</h3>
+                        </div>
+                    </div>
+                    <div class="flip-card-back" style="padding: 20px; background-color: #333; color: white; display: flex; flex-direction: column; justify-content: center;">
+                        <h3 style="margin-bottom: 15px; color: #ffcc00;">Soluciones Ferroviarias</h3>
+                        <ul style="text-align: left; list-style-type: none; padding-left: 0;">
+                            <li style="margin-bottom: 10px; display: flex; align-items: flex-start;">
+                                <span style="color: #ffcc00; margin-right: 10px;">✓</span>
+                                Acceso exclusivo a corredores ferroviarios estratégicos
+                            </li>
+                            <li style="margin-bottom: 10px; display: flex; align-items: flex-start;">
+                                <span style="color: #ffcc00; margin-right: 10px;">✓</span>
+                                Vagones especializados para diferentes tipos de mineral
+                            </li>
+                            <li style="margin-bottom: 10px; display: flex; align-items: flex-start;">
+                                <span style="color: #ffcc00; margin-right: 10px;">✓</span>
+                                Reducción de costos de hasta un 40% para grandes volúmenes
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Flip Card 3: Marítimo -->
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="/img/barco.jpg" alt="Transporte Marítimo" style="width:100%;height:100%;object-fit:cover;">
+                        <div style="position: absolute; bottom: 0; left: 0; right: 0; background-color: rgba(0,0,0,0.7); color: white; padding: 15px;">
+                            <h3>Logística Marítima</h3>
+                        </div>
+                    </div>
+                    <div class="flip-card-back" style="padding: 20px; background-color: #333; color: white; display: flex; flex-direction: column; justify-content: center;">
+                        <h3 style="margin-bottom: 15px; color: #ffcc00;">Logística Marítima</h3>
+                        <ul style="text-align: left; list-style-type: none; padding-left: 0;">
+                            <li style="margin-bottom: 10px; display: flex; align-items: flex-start;">
+                                <span style="color: #ffcc00; margin-right: 10px;">✓</span>
+                                Gestión integral de exportaciones e importaciones
+                            </li>
+                            <li style="margin-bottom: 10px; display: flex; align-items: flex-start;">
+                                <span style="color: #ffcc00; margin-right: 10px;">✓</span>
+                                Alianzas estratégicas con navieras internacionales
+                            </li>
+                            <li style="margin-bottom: 10px; display: flex; align-items: flex-start;">
+                                <span style="color: #ffcc00; margin-right: 10px;">✓</span>
+                                Operaciones en los principales puertos de Latinoamérica y el mundo
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Flip Card 4: Soluciones Integrales -->
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="/img/otros.jpg" alt="Soluciones Integrales" style="width:100%;height:100%;object-fit:cover;">
+                        <div style="position: absolute; bottom: 0; left: 0; right: 0; background-color: rgba(0,0,0,0.7); color: white; padding: 15px;">
+                            <h3>Soluciones Integrales</h3>
+                        </div>
+                    </div>
+                    <div class="flip-card-back" style="padding: 20px; background-color: #333; color: white; display: flex; flex-direction: column; justify-content: center;">
+                        <h3 style="margin-bottom: 15px; color: #ffcc00;">Soluciones Integrales</h3>
+                        <ul style="text-align: left; list-style-type: none; padding-left: 0;">
+                            <li style="margin-bottom: 10px; display: flex; align-items: flex-start;">
+                                <span style="color: #ffcc00; margin-right: 10px;">✓</span>
+                                Combinación estratégica de diferentes medios de transporte
+                            </li>
+                            <li style="margin-bottom: 10px; display: flex; align-items: flex-start;">
+                                <span style="color: #ffcc00; margin-right: 10px;">✓</span>
+                                Centros de transferencia optimizados para reducir tiempos
+                            </li>
+                            <li style="margin-bottom: 10px; display: flex; align-items: flex-start;">
+                                <span style="color: #ffcc00; margin-right: 10px;">✓</span>
+                                Software de planificación logística personalizado
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <section class="about-section">
+    <!-- Sección de casos de éxito -->
+    <section class="about-section" style="background-color: #f9f9f9;">
+        <div class="about-content">
+            <div class="about-text" style="text-align: center;">
+                <h2>CASOS DE ÉXITO</h2>
+                <div class="divider"></div>
+            </div>
+        </div>
+        
+        <div style="max-width: 1200px; margin: 0 auto; padding: 20px;">
+            <!-- Caso 1 -->
+            <div style="display: flex; margin-bottom: 40px; background-color: #fff; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                <div style="flex: 1; padding: 30px;">
+                    <h3 style="color: #333; margin-bottom: 15px;">Minera Los Andes</h3>
+                    <p style="margin-bottom: 15px;"><strong>Desafío:</strong> Transportar 20,000 toneladas mensuales de cobre en zonas de difícil acceso con costos operativos elevados.</p>
+                    <p style="margin-bottom: 15px;"><strong>Solución:</strong> Implementamos un sistema multimodal combinando transporte terrestre especializado y ferroviario con centros de transferencia estratégicos.</p>
+                    <p><strong>Resultado:</strong> Reducción del 27% en costos logísticos y disminución de 5 días en tiempos de entrega.</p>
+                </div>
+                <div style="flex: 1;">
+                    <img src="/img/view3.jpg" alt="Caso de éxito" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+            </div>
+            
+            <!-- Caso 2 -->
+            <div style="display: flex; margin-bottom: 40px; background-color: #fff; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                <div style="flex: 1;">
+                    <img src="/img/tunnel.webp" alt="Caso de éxito" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div style="flex: 1; padding: 30px;">
+                    <h3 style="color: #333; margin-bottom: 15px;">Global Mining Corp.</h3>
+                    <p style="margin-bottom: 15px;"><strong>Desafío:</strong> Optimizar la exportación internacional de 50,000 toneladas de mineral de hierro con cuellos de botella en puertos.</p>
+                    <p style="margin-bottom: 15px;"><strong>Solución:</strong> Desarrollo de un hub logístico exclusivo con infraestructura de almacenamiento y carga automatizada.</p>
+                    <p><strong>Resultado:</strong> Aumento del 35% en volumen de exportación y reducción del 40% en tiempos de espera portuarios.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de tecnología y plataforma digital -->
+    <section class="about-section" style="background-color: #fff;">
         <div class="about-content">
             <div class="about-text">
-                <h2>Medios de Transporte Utilizados</h2>
+                <h2>NUESTRA PLATAFORMA TECNOLÓGICA</h2>
+                <p>En ROC'S integramos la tecnología más avanzada para optimizar cada aspecto de la cadena logística. Nuestra plataforma digital propietaria ofrece:</p>
                 
-                <!-- Contenedor para las flip cards -->
-                <div class="transport-cards" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin-top: 30px;">
-                    
-                    <!-- Flip Card 1: Camiones -->
-                    <div class="flip-card">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front">
-                                <img src="/img/volteo.jpg" alt="Camiones" style="width:100%;height:100%;object-fit:cover;">
-                            </div>
-                            <div class="flip-card-back">
-                                <h3>Camiones</h3>
-                                <p>Contamos con una flota de camiones de alta capacidad, equipados con tecnología de telemetría para
-                                    monitorear su desempeño y garantizar su mantenimiento preventivo.</p>
-                            </div>
-                        </div>
+                <div style="display: flex; flex-wrap: wrap; justify-content: space-between; margin-top: 30px;">
+                    <div style="flex: 1; min-width: 300px; margin: 15px; padding: 25px; background-color: #f9f9f9; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                        <h3 style="color: #333; margin-bottom: 15px;">Control en Tiempo Real</h3>
+                        <p>Monitoreo 24/7 de ubicación, condiciones y estado de cada envío con alertas instantáneas ante cualquier desviación.</p>
                     </div>
                     
-                    <!-- Flip Card 2: Ferrocarril -->
-                    <div class="flip-card">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front">
-                                <img src="/img/ferrocarril.jpg" alt="Ferrocarril" style="width:100%;height:100%;object-fit:cover;">
-                            </div>
-                            <div class="flip-card-back">
-                                <h3>Ferrocarril</h3>
-                                <p>Utilizamos vías férreas propias y compartidas para el transporte de minerales, lo que nos permite
-                                    reducir costos y minimizar el impacto ambiental.</p>
-                            </div>
-                        </div>
+                    <div style="flex: 1; min-width: 300px; margin: 15px; padding: 25px; background-color: #f9f9f9; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                        <h3 style="color: #333; margin-bottom: 15px;">Analítica Predictiva</h3>
+                        <p>Algoritmos avanzados que anticipan posibles retrasos o incidencias, permitiendo acciones preventivas para mantener la continuidad operativa.</p>
                     </div>
                     
-                    <!-- Flip Card 3: Barcos -->
-                    <div class="flip-card">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front">
-                                <img src="/img/barco.jpg" alt="Barcos" style="width:100%;height:100%;object-fit:cover;">
-                            </div>
-                            <div class="flip-card-back">
-                                <h3>Barcos</h3>
-                                <p>Para el transporte marítimo, empleamos buques graneleros que operan entre puertos clave, asegurando
-                                    la entrega eficiente de grandes volúmenes de minerales.</p>
-                            </div>
-                        </div>
+                    <div style="flex: 1; min-width: 300px; margin: 15px; padding: 25px; background-color: #f9f9f9; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                        <h3 style="color: #333; margin-bottom: 15px;">Dashboard Personalizado</h3>
+                        <p>Interfaz intuitiva con métricas clave e informes personalizados para optimizar la toma de decisiones estratégicas en su operación.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section style="background-color: #ffcc00; padding: 60px 20px; text-align: center; color: #333;">
+        <div style="max-width: 800px; margin: 0 auto;">
+            <h2 style="font-size: 36px; margin-bottom: 20px;">OPTIMICE SU LOGÍSTICA MINERA HOY</h2>
+            <p style="font-size: 18px; margin-bottom: 30px;">Nuestros expertos están listos para diseñar una solución a medida para sus necesidades específicas.</p>
+            <a href="#contact" style="display: inline-block; background-color: #333; color: #fff; padding: 15px 30px; border-radius: 5px; font-weight: bold; text-transform: uppercase; transition: background-color 0.3s ease;">Solicitar consulta gratuita</a>
+        </div>
+    </section>
+
+    <!-- Contacto WhatsApp Business -->
+    <section id="contact" style="padding: 60px 20px; background-color: #f9f9f9;">
+        <div style="max-width: 1200px; margin: 0 auto; text-align: center;">
+            <h2 style="margin-bottom: 30px;">CONTÁCTENOS</h2>
+            <div class="divider" style="margin-bottom: 40px;"></div>
+            
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; align-items: center;">
+                <!-- WhatsApp Business Card -->
+                <div style="flex: 1; min-width: 300px; max-width: 500px; background-color: #fff; padding: 40px; border-radius: 10px; box-shadow: 0 6px 15px rgba(0,0,0,0.1); text-align: center;">
+                    <img src="/img/social/whats.png" alt="WhatsApp Business" style="width: 80px; height: 80px; margin-bottom: 20px;">
+                    <h3 style="font-size: 28px; margin-bottom: 20px; color: #333;">Atención inmediata vía WhatsApp Business</h3>
+                    <p style="font-size: 18px; margin-bottom: 30px; color: #666;">Nuestro equipo de expertos está listo para atender sus consultas y diseñar soluciones logísticas a medida para su operación minera.</p>
+                    
+                    <div style="background-color: #25D366; padding: 15px 25px; border-radius: 50px; display: inline-block; margin-bottom: 30px;">
+                        <a href="https://wa.me/123456789" style="color: white; text-decoration: none; font-size: 20px; font-weight: bold; display: flex; align-items: center; gap: 10px;">
+                            <span>Contactar ahora</span>
+                            <span style="font-size: 24px;">→</span>
+                        </a>
                     </div>
                     
-                    <!-- Flip Card 4: Otros Medios -->
-                    <div class="flip-card">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front">
-                                <img src="/img/otros.jpg" alt="Otros Medios" style="width:100%;height:100%;object-fit:cover;">
+                    <p style="font-size: 16px; color: #666;">Disponible 24/7 para consultas y emergencias logísticas</p>
+                </div>
+                
+                <!-- Información de contacto -->
+                <div style="flex: 1; min-width: 300px; max-width: 500px;">
+                    <div style="background-color: #f5f5f5; padding: 30px; border-radius: 10px; text-align: left;">
+                        <h3 style="margin-bottom: 20px; color: #333; font-size: 24px;">Información de contacto</h3>
+                        
+                        <div style="margin-bottom: 20px; display: flex; align-items: flex-start; gap: 15px;">
+                            <div style="min-width: 24px; text-align: center;">
+                                <img src="/img/assets/objetivo.png" alt="Ubicación" style="width: 24px; height: 24px;">
                             </div>
-                            <div class="flip-card-back">
-                                <h3>Otros Medios</h3>
-                                <p>En casos excepcionales, utilizamos transporte aéreo para envíos urgentes o de alto valor, y
-                                    transporte por tubería para líquidos o minerales en suspensión.</p>
+                            <div>
+                                <p style="margin: 0; font-weight: bold;">Oficina central</p>
+                                <p style="margin: 5px 0 0 0;">500 Terry Francine Street, San Francisco, CA 94158</p>
+                            </div>
+                        </div>
+                        
+                        <div style="margin-bottom: 20px; display: flex; align-items: flex-start; gap: 15px;">
+                            <div style="min-width: 24px; text-align: center;">
+                                <img src="/img/assets/vision.png" alt="Correo" style="width: 24px; height: 24px;">
+                            </div>
+                            <div>
+                                <p style="margin: 0; font-weight: bold;">Email</p>
+                                <p style="margin: 5px 0 0 0;">logistica@rocsmineria.com</p>
+                            </div>
+                        </div>
+                        
+                        <div style="margin-bottom: 20px; display: flex; align-items: flex-start; gap: 15px;">
+                            <div style="min-width: 24px; text-align: center;">
+                                <img src="/img/assets/estrellas.png" alt="Horario" style="width: 24px; height: 24px;">
+                            </div>
+                            <div>
+                                <p style="margin: 0; font-weight: bold;">Horario de atención</p>
+                                <p style="margin: 5px 0 0 0;">Lunes a Viernes: 8:00 - 18:00</p>
                             </div>
                         </div>
                     </div>
@@ -143,43 +340,21 @@
         </div>
     </section>
 
-    <section class="about-section">
-        <div class="about-content">
-            <div class="about-text">
-                <h2>Seguridad y Normativas</h2>
-                <h3>Protocolos de Seguridad</h3>
-                <p>Implementamos programas de capacitación para conductores y operarios, y utilizamos equipos de
-                    protección
-                    personal (EPP) y sistemas de protección en vehículos.</p>
-                <h3>Cumplimiento Normativo</h3>
-                <p>Adherimos a normas internacionales como ISO 9001 y ISO 14001, y cumplimos con todas las regulaciones
-                    locales
-                    e internacionales de transporte y medio ambiente.</p>
-                <h3>Monitoreo y Tecnología</h3>
-                <p>Utilizamos sistemas de rastreo GPS y sensores para monitorear en tiempo real la ubicación y
-                    condiciones de
-                    los envíos, asegurando la comunicación constante entre conductores y centros de control.</p>
-            </div>
-        </div>
-    </section>
-
     <footer>
-        <p>© 2023 Empresa Minera. Todos los derechos reservados.</p>
-    </footer>
+        <div class="footer-logo">
+            <img src="/img/Logo.png" alt="ROC'S Servicios Mineros" class="logo">
+        </div>
+        <div class="social-icons">
+            <a href="#" target="_blank"><img src="/img/social/fb.png" alt="Facebook"></a>
+            <a href="#" target="_blank"><img src="/img/social/ig.png" alt="Instagram"></a>
+            <a href="#" target="_blank"><img src="/img/social/whats.png" alt="WhatsApp"></a>
+        </div>
+        <div class="copyright">
+            © ROC'S Servicios Mineros 2025. Todos los derechos reservados.
+        </div>
+    </footer> 
 
-    <script>
-        // Aquí puedes agregar el código JavaScript para integrar el mapa interactivo
-        function initMap() {
-            var map = new google.maps.Map(document.getElementById('map'), {
-                center: { lat: -34.397, lng: 150.644 },
-                zoom: 8
-            });
-        }
-    </script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=TU_API_KEY&callback=initMap">
-    </script>
+    <script src="/js/navbar.js"></script>
 </body>
-
-<script src="/js/navbar.js"></script>
 
 </html>

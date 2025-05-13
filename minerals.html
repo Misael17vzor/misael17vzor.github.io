@@ -4,27 +4,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minerales de la Mina</title>
-    <link rel="stylesheet" href="/css/css.css">
+    <title>Productos Minerales | ROC'S Servicios Mineros</title>
+    <!-- <link rel="stylesheet" href="/css/css.css"> -->
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/minerals.css">
 </head>
+
 <header>
     <div class="header-container">
         <div class="logo">
             <a href="/index.html">
-                <img src="/img/Logo.png" alt="Logo">
+                <img src="/img/Logo.png" alt="ROC'S Servicios Mineros">
             </a>
         </div>
-        <!-- Botón del menú hamburguesa (solo para móviles) -->
         <button class="menu-toggle" aria-label="Abrir menú">
             <span class="hamburger"></span>
         </button>
         <nav class="main-nav">
             <ul>
-                <li><a href="/index.html" class="active">Inicio</a></li>
+                <li><a href="/index.html">Inicio</a></li>
                 <li><a href="/extractionproduction.html">Extracción</a></li>
-                <li><a href="/procesamiento.html">Procesamiento de Minerales</a></li>
-                <li><a href="/logistic.html">Logística y Transporte</a></li>
-                <li><a href="/minerals.html">Comercialización y Venta de Minerales</a></li>
+                <li><a href="/procesamiento.html">Procesamiento</a></li>
+                <li><a href="/logistic.html">Logística</a></li>
+                <li><a href="/minerals.html" class="active">Productos</a></li>
             </ul>
         </nav>
     </div>
@@ -33,55 +35,350 @@
 <body>
     <section class="hero hero-mineral">
         <div class="hero-content">
-            <h1>Productos Minerales</h1>
-            <p>Conoce los nuestros Productos.</p>
-        </div>
-    </section>
-    <!-- Seccion de Productos -->
-    <section class="products">
-        <h2>Productos</h2>
-        <div class="minerals-container">
-            <!-- Tarjetas para cada mineral -->
-            <div class="card">
-                <img src="/img/minerals/oro.jpeg" alt="Oro">
-                <h2>Oro</h2>
-                <p>El oro es un elemento químico, de símbolo Au.</p>
-            </div>
-            <div class="card">
-                <img src="/img/minerals/plata.jpg" alt="Plata">
-                <h2>Plata</h2>
-                <p>La plata es un elemento químico, de símbolo Ag.</p>
-            </div>
-            <div class="card">
-                <img src="/img/minerals/cobre.jpg" alt="Cobre">
-                <h2>Cobre</h2>
-                <p>El cobre es un elemento químico, de símbolo Cu.</p>
-            </div>
-            <div class="card">
-                <img src="/img/minerals/zinc.jpg" alt="Zinc">
-                <h2>Zinc</h2>
-                <p>El zinc es un elemento químico, de símbolo Zn.</p>
-            </div>
-            <div class="card">
-                <img src="/img/minerals/plomo.jpg" alt="Plomo">
-                <h2>Plomo</h2>
-                <p>El plomo es un elemento químico, de símbolo Pb.</p>
-            </div>
+            <h1>Soluciones Minerales Premium</h1>
+            <p>Calidad excepcional que impulsa resultados en diversas industrias</p>
         </div>
     </section>
 
+    <section class="products-intro">
+        <h2>Nuestros Productos Minerales</h2>
+        <p>En ROC'S ofrecemos una amplia gama de minerales procesados de alta calidad, adaptados a las necesidades
+            específicas de cada industria. Nuestros productos cumplen con los más altos estándares internacionales y
+            cuentan con certificaciones que garantizan su pureza y rendimiento superior.</p>
+    </section>
 
+    <section class="product-filters">
+        <button class="filter-btn active" data-category="all">Todos los productos</button>
+        <button class="filter-btn" data-category="metales-preciosos">Metales preciosos</button>
+        <button class="filter-btn" data-category="metales-industriales">Metales industriales</button>
+        <button class="filter-btn" data-category="minerales-especiales">Minerales especiales</button>
+    </section>
 
+    <section class="products-grid">
+        <!-- Producto 1: Oro -->
+        <div class="product-card" data-category="metales-preciosos">
+            <div class="product-image">
+                <img src="/img/minerals/oro.jpeg" alt="Oro Premium">
+                <div class="product-badge">Premium</div>
+            </div>
+            <div class="product-content">
+                <h3 class="product-title">Oro de Alta Pureza</h3>
+                <div class="product-specs">
+                    <div class="spec-item">
+                        <span class="spec-label">Pureza:</span>
+                        <span>99.99% (24K)</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Formatos:</span>
+                        <span>Lingotes, granulado, polvo</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Certificación:</span>
+                        <span>ISO 9001, LBMA</span>
+                    </div>
+                </div>
+                <p class="product-description">Nuestro oro de alta pureza es ideal para joyería fina, componentes
+                    electrónicos y aplicaciones médicas. Extraído y refinado con los más altos estándares, garantizamos
+                    un producto de calidad excepcional.</p>
+                <div class="product-footer">
+                    <div class="product-price">Cotización personalizada</div>
+                    <button class="cta-button">Solicitar información</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Producto 2: Plata -->
+        <div class="product-card" data-category="metales-preciosos">
+            <div class="product-image">
+                <img src="/img/minerals/plata.jpg" alt="Plata Refinada">
+            </div>
+            <div class="product-content">
+                <h3 class="product-title">Plata Refinada</h3>
+                <div class="product-specs">
+                    <div class="spec-item">
+                        <span class="spec-label">Pureza:</span>
+                        <span>99.9% (0.999)</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Formatos:</span>
+                        <span>Barras, granulado, láminas</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Certificación:</span>
+                        <span>ISO 9001, LPPM</span>
+                    </div>
+                </div>
+                <p class="product-description">Plata de alta calidad para uso industrial, joyería y aplicaciones
+                    médicas. Nuestro proceso de refinación garantiza un producto con conductividad térmica y eléctrica
+                    excepcional.</p>
+                <div class="product-footer">
+                    <div class="product-price">Cotización personalizada</div>
+                    <button class="cta-button">Solicitar información</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Producto 3: Cobre -->
+        <div class="product-card" data-category="metales-industriales">
+            <div class="product-image">
+                <img src="/img/minerals/cobre.jpg" alt="Cobre Electrolítico">
+                <div class="product-badge">Alta demanda</div>
+            </div>
+            <div class="product-content">
+                <h3 class="product-title">Cobre Electrolítico Grado A</h3>
+                <div class="product-specs">
+                    <div class="spec-item">
+                        <span class="spec-label">Pureza:</span>
+                        <span>99.99% (Cu-CATH-1)</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Formatos:</span>
+                        <span>Cátodos, barras, alambrón</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Certificación:</span>
+                        <span>ISO 9001, LME Grado A</span>
+                    </div>
+                </div>
+                <p class="product-description">Nuestro cobre electrolítico de alta conductividad es perfecto para
+                    aplicaciones eléctricas, electrónicas y de construcción. Cumple con los estándares del London Metal
+                    Exchange (LME).</p>
+                <div class="product-footer">
+                    <div class="product-price">Desde $8,500/tonelada</div>
+                    <button class="cta-button">Solicitar información</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Producto 4: Zinc -->
+        <div class="product-card" data-category="metales-industriales">
+            <div class="product-image">
+                <img src="/img/minerals/zinc.jpg" alt="Zinc Refinado">
+            </div>
+            <div class="product-content">
+                <h3 class="product-title">Zinc Especial de Alta Pureza</h3>
+                <div class="product-specs">
+                    <div class="spec-item">
+                        <span class="spec-label">Pureza:</span>
+                        <span>99.995% (SHG)</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Formatos:</span>
+                        <span>Lingotes, planchas, polvo</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Certificación:</span>
+                        <span>ISO 9001, LME</span>
+                    </div>
+                </div>
+                <p class="product-description">Zinc de alta calidad para galvanización, aleaciones y aplicaciones
+                    químicas. Nuestra producción garantiza baja presencia de impurezas y excelente comportamiento en
+                    procesos industriales.</p>
+                <div class="product-footer">
+                    <div class="product-price">Desde $3,200/tonelada</div>
+                    <button class="cta-button">Solicitar información</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Producto 5: Plomo -->
+        <div class="product-card" data-category="metales-industriales">
+            <div class="product-image">
+                <img src="/img/minerals/plomo.jpg" alt="Plomo Refinado">
+            </div>
+            <div class="product-content">
+                <h3 class="product-title">Plomo Refinado</h3>
+                <div class="product-specs">
+                    <div class="spec-item">
+                        <span class="spec-label">Pureza:</span>
+                        <span>99.97% (Grado A)</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Formatos:</span>
+                        <span>Lingotes, planchas</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Certificación:</span>
+                        <span>ISO 9001, LME</span>
+                    </div>
+                </div>
+                <p class="product-description">Nuestro plomo refinado es ideal para baterías, protección contra
+                    radiación y aplicaciones industriales específicas. Producido bajo estrictos controles de calidad y
+                    seguridad.</p>
+                <div class="product-footer">
+                    <div class="product-price">Desde $2,100/tonelada</div>
+                    <button class="cta-button">Solicitar información</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Producto 6: Litio -->
+        <div class="product-card" data-category="minerales-especiales">
+            <div class="product-image">
+                <img src="/img/minerals/carbonato de litio.jpg" alt="Carbonato de Litio">
+                <div class="product-badge">Sostenible</div>
+            </div>
+            <div class="product-content">
+                <h3 class="product-title">Carbonato de Litio Grado Batería</h3>
+                <div class="product-specs">
+                    <div class="spec-item">
+                        <span class="spec-label">Pureza:</span>
+                        <span>≥99.5% Li₂CO₃</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Formatos:</span>
+                        <span>Polvo, micronizado</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Certificación:</span>
+                        <span>ISO 9001, IRMA</span>
+                    </div>
+                </div>
+                <p class="product-description">Carbonato de litio de alta pureza para fabricación de baterías de
+                    ion-litio y aplicaciones cerámicas. Extraído mediante procesos sostenibles y refinado con tecnología
+                    de punta.</p>
+                <div class="product-footer">
+                    <div class="product-price">Cotización personalizada</div>
+                    <button class="cta-button">Solicitar información</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="certifications">
+        <div class="certification-item">
+            <img src="/img/icons/iso.png" alt="ISO Certified" class="certification-icon">
+            <span class="certification-text">ISO 9001:2015</span>
+        </div>
+        <div class="certification-item">
+            <img src="/img/icons/lme.png" alt="LME Registered" class="certification-icon">
+            <span class="certification-text">LME Registered Brand</span>
+        </div>
+        <div class="certification-item">
+            <img src="/img/icons/sustainable.png" alt="Sustainable Mining" class="certification-icon">
+            <span class="certification-text">Minería Responsable</span>
+        </div>
+        <div class="certification-item">
+            <img src="/img/icons/quality.png" alt="Quality Assured" class="certification-icon">
+            <span class="certification-text">Control de Calidad</span>
+        </div>
+    </section>
+
+    <section class="clients-testimonials">
+        <h2 class="testimonials-title">Lo que dicen nuestros clientes</h2>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <p class="testimonial-content">"La calidad del cobre que proporciona ROC'S ha superado nuestras
+                    expectativas. La consistencia del producto nos ha permitido optimizar nuestros procesos de
+                    fabricación, resultando en productos finales de mayor calidad y menor tasa de defectos."</p>
+                <div class="testimonial-author">
+                    <div class="author-image">
+                        <img src="/img/testimonials/client1.jpg" alt="Carlos Mendoza">
+                    </div>
+                    <div class="author-info">
+                        <h4>Carlos Mendoza</h4>
+                        <p class="author-company">Director de Compras, ElectroComp S.A.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <p class="testimonial-content">"Como fabricantes de joyería fina, la pureza y consistencia del oro es
+                    crucial para nuestros productos. ROC'S nos ha proporcionado materiales de la más alta calidad, con
+                    certificaciones que respaldan su pureza, permitiéndonos mantener nuestros estándares de excelencia."
+                </p>
+                <div class="testimonial-author">
+                    <div class="author-image">
+                        <img src="/img/testimonials/client2.jpg" alt="Luisa Ramírez">
+                    </div>
+                    <div class="author-info">
+                        <h4>Luisa Ramírez</h4>
+                        <p class="author-company">CEO, Joyería Platinum</p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <p class="testimonial-content">"Lo que más valoramos de ROC'S es su compromiso con la entrega puntual y
+                    su flexibilidad para adaptarse a nuestras necesidades cambiantes. Su zinc de alta pureza ha sido
+                    fundamental para mejorar la durabilidad de nuestros productos galvanizados."</p>
+                <div class="testimonial-author">
+                    <div class="author-image">
+                        <img src="/img/testimonials/client3.jpg" alt="Miguel Torres">
+                    </div>
+                    <div class="author-info">
+                        <h4>Miguel Torres</h4>
+                        <p class="author-company">Gerente de Operaciones, Galvamet Industrial</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-cta">
+        <div class="cta-container">
+            <h2 class="cta-title">¿Necesita productos minerales de calidad superior?</h2>
+            <p class="cta-text">Nuestro equipo de expertos está listo para ayudarle a encontrar la solución perfecta
+                para sus necesidades específicas. Ofrecemos asesoramiento técnico, muestras de productos y cotizaciones
+                personalizadas.</p>
+            <div class="cta-buttons">
+                <button class="primary-cta">Solicitar cotización</button>
+                <button class="secondary-cta">Contactar a un especialista</button>
+            </div>
+        </div>
+    </section>
 
     <footer>
-        <ul class="social-icons">
-            <li><a href="#" target="_blank"><img src="/img/social/fb.png" alt="Facebook"></a></li>
-            <li><a href="#" target="_blank"><img src="img/social/ig.png" alt="Instagram"></a></li>
-            <li><a href="#" target="_blank"><img src="img/social/whats.png" alt="WhatsApp"></a></li>
-        </ul>
+        <div class="footer-logo">
+            <img src="/img/Logo.png" alt="ROC'S Servicios Mineros" class="logo">
+        </div>
+        <div class="social-icons">
+            <a href="#" target="_blank"><img src="/img/social/fb.png" alt="Facebook"></a>
+            <a href="#" target="_blank"><img src="/img/social/ig.png" alt="Instagram"></a>
+            <a href="#" target="_blank"><img src="/img/social/whats.png" alt="WhatsApp"></a>
+        </div>
+        <div class="copyright">
+            © ROC'S Servicios Mineros 2025. Todos los derechos reservados.
+        </div>
     </footer>
-    <script src="/js/navbar.js"></script>
 
+    <script src="/js/navbar.js"></script>
+    <script>
+        // Script para el filtrado de productos
+        document.addEventListener('DOMContentLoaded', function () {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const productCards = document.querySelectorAll('.product-card');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Quitar clase activa de todos los botones
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+
+                    // Agregar clase activa al botón clickeado
+                    button.classList.add('active');
+
+                    // Obtener categoría a filtrar
+                    const category = button.getAttribute('data-category');
+
+                    // Mostrar u ocultar productos según la categoría
+                    productCards.forEach(card => {
+                        if (category === 'all' || card.getAttribute('data-category') === category) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+
+            // Eventos para los botones CTA
+            const ctaButtons = document.querySelectorAll('.cta-button, .primary-cta, .secondary-cta');
+            ctaButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Redirigir al formulario de contacto
+                    window.location.href = '/index.html#contact';
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>
