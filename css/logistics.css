@@ -97,52 +97,73 @@
 /*===========================================================
  * 3. FLIP-CARDS
  *===========================================================*/
-.flip-card {
-    background-color: transparent;
-    width: 280px;
-    height: 380px;
-    perspective: 1000px;
-    margin: 15px;
-    border-radius: 10px;
+.flip-cards-container {
+    display: flex;
+    flex-wrap: nowrap; /* Evita que las tarjetas se envuelvan a una nueva línea */
+    justify-content: center;
+    gap: 20px; /* Espacio entre las tarjetas */
+    max-width: 100%; /* Usa todo el ancho disponible */
+    overflow-x: auto; /* Permite desplazamiento horizontal si es necesario */
+    padding: 20px 10px; /* Añade algo de espacio alrededor */
+    margin: 0 auto; /* Centra el contenedor */
+    perspective: 1000px; /* Añade perspectiva al contenedor en lugar de a cada tarjeta */
 }
 
-.flip-card-inner {
+/* Ajuste de tamaño para las flip cards */
+.flip-card {
+    flex: 0 0 auto; /* No permite que la tarjeta crezca o se encoja */
+    width: 280px; /* Ancho fijo para cada tarjeta */
+    height: 380px; /* Altura fija para mantener la proporción */
+    margin: 5px; /* Reduce el margen para que entren más tarjetas */
+    background-color: transparent;
     position: relative;
+    transform-style: preserve-3d; /* Asegura que la transformación sea en 3D */
+    perspective: none; /* Elimina la perspectiva individual que puede causar desplazamiento */
+}
+
+/* Corrección del contenedor interno */
+.flip-card-inner {
+    position: absolute; /* Cambiado de relative a absolute para mantener su posición */
     width: 100%;
     height: 100%;
     text-align: center;
-    transition: transform 0.8s;
+    transition: transform 0.6s; /* Reducido de 0.8s a 0.6s para una animación más rápida */
     transform-style: preserve-3d;
-    border-radius: 10px;
+    backface-visibility: hidden; /* Asegura que el reverso no sea visible durante la animación */
 }
+
 
 .flip-card:hover .flip-card-inner {
     transform: rotateY(180deg);
 }
 
+/* Efecto de hover */
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Caras de la tarjeta - front y back */
 .flip-card-front, .flip-card-back {
     position: absolute;
     width: 100%;
     height: 100%;
+    -webkit-backface-visibility: hidden; /* Para compatibilidad con Safari */
     backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
-    border-radius: 10px;
     overflow: hidden;
+    border-radius: 10px;
 }
 
 .flip-card-front {
     background-color: #bbb;
     color: white;
+    z-index: 2; /* Asegura que el frente esté encima durante el estado normal */
 }
 
 .flip-card-back {
     background-color: #333;
     color: white;
-    transform: rotateY(180deg);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 20px;
+    transform: rotateY(180deg); /* Mantiene el reverso girado */
+    z-index: 1; /* Asegura que el reverso esté detrás en estado normal */
 }
 
 .flip-card-front img {
@@ -201,6 +222,12 @@
     margin: 0 auto 30px;
 }
 
+.about-section[style*="background-color: #f9f9f9"] div[style*="display: flex; margin-bottom: 40px"] div[style*="flex: 1"]:not([style*="padding"]) {
+    height: 350px; /* Altura fija para mantener consistencia */
+    flex: 1; /* Mantiene la proporción flex */
+    overflow: hidden; /* Asegura que no haya desbordamiento */
+    position: relative; /* Para posicionamiento absoluto de las imágenes si es necesario */
+}
 .about-section[style*="background-color: #f9f9f9"] div[style*="display: flex; margin-bottom: 40px"] {
     display: flex;
     margin-bottom: 40px;
@@ -514,3 +541,214 @@ section#contact div[style*="margin-bottom: 20px; display: flex"] p:first-child {
         margin: 15px 0;
     }
 }
+
+@media (max-width: 768px) {
+    /* Ajuste para todas las tarjetas de caso de éxito */
+    .about-section[style*="background-color: #f9f9f9"] div[style*="display: flex; margin-bottom: 40px"] {
+        flex-direction: column;
+        margin-bottom: 30px;
+    }
+    
+    /* Forzar el orden: texto primero, imagen después */
+    .about-section[style*="background-color: #f9f9f9"] div[style*="display: flex; margin-bottom: 40px"] div[style*="flex: 1; padding: 30px"] {
+        order: 1; /* Contenido de texto primero */
+        padding: 25px !important; /* Reduce ligeramente el padding */
+    }
+    
+    .about-section[style*="background-color: #f9f9f9"] div[style*="display: flex; margin-bottom: 40px"] div[style*="flex: 1"] img {
+        order: 2; /* Imagen después */
+        height: 220px !important; /* Altura más apropiada para móvil */
+    }
+    
+    /* Asegurar que el contenedor de la imagen tenga el orden correcto */
+    .about-section[style*="background-color: #f9f9f9"] div[style*="display: flex; margin-bottom: 40px"] div[style*="flex: 1"]:not([style*="padding"]) {
+        order: 2;
+    }
+    
+    /* Ajuste para las imágenes */
+    .about-section[style*="background-color: #f9f9f9"] div[style*="flex: 1"] img {
+        width: 100%;
+        height: 220px !important; /* Altura fija más apropiada para móvil */
+        object-fit: cover;
+    }
+    
+    /* Mejoras en la presentación del texto */
+    .about-section[style*="background-color: #f9f9f9"] div[style*="flex: 1; padding: 30px"] h3 {
+        font-size: 1.6rem;
+        text-align: center;
+    }
+    
+    .about-section[style*="background-color: #f9f9f9"] div[style*="flex: 1; padding: 30px"] p {
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+    
+    /* Contenedor general de la sección */
+    .about-section[style*="background-color: #f9f9f9"] div[style*="max-width: 1200px"] {
+        padding: 0 15px;
+    }
+}
+
+/* Ajustes adicionales para pantallas muy pequeñas */
+@media (max-width: 480px) {
+    .about-section[style*="background-color: #f9f9f9"] div[style*="flex: 1; padding: 30px"] {
+        padding: 20px !important; /* Aún menos padding */
+    }
+    
+    .about-section[style*="background-color: #f9f9f9"] div[style*="flex: 1"] img {
+        height: 180px !important; /* Imágenes más pequeñas */
+    }
+    
+    .about-section[style*="background-color: #f9f9f9"] div[style*="flex: 1; padding: 30px"] h3 {
+        font-size: 1.4rem;
+    }
+}
+section#contact .contact-cards-scroll {
+    padding: 30px !important;
+    display: flex;
+    overflow-x: auto;
+    margin-bottom: 40px;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Ajuste adicional para asegurar la consistencia con la página de índice */
+section#contact .contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section#contact .feature-icon {
+    background-color: rgba(255, 204, 0, 0.479);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+section#contact .feature-icon img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Ajuste para flip cards en vista móvil - formato vertical */
+
+/* Contenedor principal para las flip cards */
+.flip-cards-container {
+    display: flex;
+    flex-wrap: nowrap; /* Evita que las tarjetas se envuelvan en escritorio */
+    justify-content: center;
+    gap: 20px;
+    max-width: 100%;
+    overflow-x: auto;
+    padding: 20px 10px;
+    margin: 0 auto;
+    perspective: 1000px;
+}
+
+/* Estilos base para flip cards */
+.flip-card {
+    flex: 0 0 auto;
+    width: 280px;
+    height: 380px;
+    margin: 5px;
+    background-color: transparent;
+    position: relative;
+    transform-style: preserve-3d;
+    perspective: none;
+}
+
+.flip-card-inner {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.flip-card-front {
+    background-color: #bbb;
+    color: white;
+    z-index: 2;
+}
+
+.flip-card-back {
+    background-color: #333;
+    color: white;
+    transform: rotateY(180deg);
+    z-index: 1;
+}
+
+/* Cambio a formato vertical en vista móvil */
+@media (max-width: 768px) {
+    .flip-cards-container {
+        flex-direction: column; /* Cambia a disposición vertical */
+        align-items: center; /* Centra las tarjetas */
+        overflow-x: visible; /* Elimina el desplazamiento horizontal */
+        gap: 40px; /* Más espacio entre tarjetas */
+        padding: 20px 15px;
+    }
+    
+    .flip-card {
+        width: 100%; /* Ancho completo disponible */
+        max-width: 320px; /* Limita el ancho máximo */
+        height: 380px; /* Mantiene la altura */
+        margin: 0; /* Elimina márgenes laterales */
+    }
+    
+    /* Mejora la visualización del contenido del reverso */
+    .flip-card-back {
+        padding: 15px;
+    }
+    
+    /* Ajuste para el texto en la tarjeta */
+    .flip-card-front h3 {
+        font-size: 1.3rem;
+    }
+    
+    .flip-card-back h3 {
+        font-size: 1.3rem;
+    }
+    
+    .flip-card-back ul li {
+        text-align: left;
+        font-size: 0.9rem;
+        margin-bottom: 8px;
+    }
+}
+
+/* Ajustes para pantallas muy pequeñas */
+@media (max-width: 480px) {
+    .flip-card {
+        height: 350px; /* Ligeramente más pequeña */
+    }
+    
+    .flip-card-back ul {
+        padding-left: 5px; /* Reduce el padding de la lista */
+    }
+    
+    .flip-card-back ul li {
+        font-size: 0.85rem; /* Texto ligeramente más pequeño */
+    }
+}
+

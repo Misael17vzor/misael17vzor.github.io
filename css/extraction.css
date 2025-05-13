@@ -30,7 +30,13 @@
  * 2. SECCIONES DE CONTENIDO
  *===========================================================*/
 .about-content {
-    margin-bottom: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 .about-content h2 {
@@ -68,7 +74,70 @@
     left: 0;
 }
 
+@media (max-width: 768px) {
+    /* Para todas las secciones about-content */
+    .about-content {
+        flex-direction: column;
+    }
+    
+    /* Ajuste específico para secciones donde la imagen está primero en el HTML */
+    .about-content:nth-child(even) {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    /* Forzar orden específico: texto, imagen, botón */
+    .about-content .about-text {
+        order: 1; /* Primero el texto */
+    }
+    
+    .about-content .about-image {
+        order: 2; /* Después la imagen */
+        margin-top: 20px; /* Espacio entre texto e imagen */
+        margin-bottom: 20px; /* Espacio entre imagen y botón */
+    }
+    
+    /* Asegurar que el botón CTA esté siempre al final */
+    .about-content .cta-button {
+        order: 3; /* Botón al final */
+        margin-top: 15px; /* Espaciado */
+        width: 100%; /* Ancho completo en móvil */
+        text-align: center;
+    }
+    
+    /* Ajuste del ancho de los elementos a pantalla completa */
+    .about-content .about-text,
+    .about-content .about-image {
+        width: 100%;
+    }
+    
+    /* Asegurar que las imágenes se ajusten correctamente */
+    .about-content .about-image img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+    
+    /* Centrar textos en móvil para mejor legibilidad */
+    .about-content .about-text h2,
+    .about-content .about-text h3 {
+        text-align: center;
+    }
+    
+    /* Ajuste para espaciado general en móvil */
+    .about-content {
+        padding: 15px 10px;
+        margin-bottom: 30px;
+    }
+}
 
+/* Ajustes específicos para pantallas muy pequeñas */
+@media (max-width: 480px) {
+    .about-content .cta-button a {
+        display: block; /* Botón a ancho completo */
+        padding: 12px 15px;
+    }
+}
 
 /*===========================================================
  * 3. CASOS DE ÉXITO
@@ -259,33 +328,7 @@
     text-align: center;
 }
 
-.whatsapp-button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #25D366;
-    color: white;
-    padding: 15px 30px;
-    border-radius: 50px;
-    font-size: 18px;
-    font-weight: bold;
-    text-decoration: none;
-    margin-bottom: 20px;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 10px rgba(37, 211, 102, 0.3);
-}
 
-.whatsapp-button:hover {
-    background-color: #128C7E;
-    transform: translateY(-3px);
-    box-shadow: 0 6px 15px rgba(37, 211, 102, 0.4);
-}
-
-.whatsapp-icon {
-    width: 28px;
-    height: 28px;
-    margin-right: 10px;
-}
 
 .contact-note {
     font-size: 16px;
@@ -354,11 +397,6 @@
         max-width: 300px;
     }
     
-    .whatsapp-button {
-        width: 100%;
-        padding: 12px 20px;
-        font-size: 16px;
-    }
     
     .case-studies-grid,
     .approach-content,

@@ -115,6 +115,15 @@
     line-height: 1.6em;
     color: #666;
 }
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
 
 /* Mejoras para about-text */
 .about-text h2 {
@@ -157,6 +166,90 @@
     font-weight: bold;
 }
 
+/* Reglas específicas para vista móvil */
+@media (max-width: 768px) {
+    /* Ajuste general para about-content en móvil */
+    .about-content {
+        flex-direction: column;
+        padding: 15px 10px;
+        margin-bottom: 25px;
+    }
+    
+    /* Forzar el orden: texto primero, imagen después */
+    .about-content .about-text {
+        order: 1; /* Texto siempre primero */
+        width: 100%;
+        margin-bottom: 20px; /* Espacio antes de la imagen */
+    }
+    
+    .about-content .about-image {
+        order: 2; /* Imagen siempre después */
+        width: 100%;
+        margin-top: 10px;
+    }
+    
+    /* Asegurar que las imágenes se ajusten correctamente */
+    .about-content .about-image img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 8px; /* Mantiene bordes redondeados */
+    }
+    
+    /* Mejorar presentación del texto en móvil */
+    .about-content .about-text h2 {
+        text-align: center; /* Centra los títulos */
+        font-size: 1.8rem; /* Ligera reducción para mejor ajuste */
+    }
+    
+    .about-content .about-text h3 {
+        font-size: 1.5rem; /* Ajuste de tamaño */
+    }
+    
+    /* Para la sección de case-study (casos de éxito) */
+    .about-content .case-study {
+        margin: 15px 0;
+        padding: 12px;
+        font-size: 0.95rem; /* Ligeramente más pequeño */
+    }
+    
+    /* Para las listas en about-text */
+    .about-content .about-text ul {
+        margin-left: 10px; /* Reduce el margen */
+    }
+    
+    .about-content .about-text ul li {
+        margin-bottom: 8px; /* Espacio entre elementos de lista */
+    }
+}
+
+/* Ajustes para las cards de servicio en vista móvil */
+@media (max-width: 768px) {
+    .services-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .service-card {
+        width: 90% !important; /* Sobreescribe el ancho inline */
+        margin-bottom: 20px;
+    }
+}
+
+/* Ajustes específicos para pantallas muy pequeñas */
+@media (max-width: 480px) {
+    .about-content .about-text h2 {
+        font-size: 1.6rem; /* Más pequeño en pantallas muy pequeñas */
+    }
+    
+    .about-content .about-text h3 {
+        font-size: 1.3rem;
+    }
+    
+    .about-content .about-image {
+        margin: 10px 0 15px; /* Ajuste de márgenes */
+    }
+}
 /*===========================================================
  * 3. CASOS DE ÉXITO
  *===========================================================*/

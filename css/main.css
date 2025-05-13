@@ -249,6 +249,42 @@ footer {
     height: 30px;
 }
 
+/* Ajuste para vista móvil */
+@media (max-width: 768px) {
+    .whatsapp-button {
+        bottom: 70px; /* Movido más arriba en pantallas móviles */
+        right: 20px; /* Ligeramente más cerca del borde */
+        width: 55px; /* Ligeramente más pequeño */
+        height: 55px;
+    }
+}
+
+/* Ajuste para pantallas muy pequeñas */
+@media (max-width: 480px) {
+    .whatsapp-button {
+        bottom: 85px; /* Aún más arriba en pantallas muy pequeñas */
+        right: 15px;
+        /* Aumentamos el tamaño para facilitar la interacción en pantallas táctiles pequeñas */
+        width: 60px;
+        height: 60px;
+        /* Sombra más pronunciada para destacar */
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+    }
+    
+    /* Mejora la visibilidad del icono */
+    .whatsapp-button img {
+        width: 32px;
+        height: 32px;
+    }
+}
+
+/* Evitar que se superponga con el pie de página al desplazarse */
+@media (max-height: 650px) {
+    .whatsapp-button {
+        bottom: 100px; /* Extra espacio para pantallas de poca altura */
+    }
+}
+
 /*===========================================================
  * 4. COMPONENTES COMUNES
  *===========================================================*/
@@ -512,7 +548,32 @@ footer {
     color: white;
     transform: rotateY(180deg);
 }
+@media (max-width: 768px) {
+    .contact-cards-scroll {
+        flex-direction: column; /* Cambia a dirección columna */
+        overflow-x: visible; /* Elimina el scroll horizontal */
+        align-items: center; /* Centra las tarjetas */
+        padding: 20px 15px; /* Ajusta el padding para móviles */
+        gap: 30px; /* Más espacio entre tarjetas en vista vertical */
+    }
+    
+    /* Ajusta el ancho de las tarjetas para que ocupen todo el ancho disponible */
+    .contact-card {
+        width: 100% !important; /* Sobreescribe cualquier ancho fijo */
+        max-width: 450px; /* Limita el ancho máximo en pantallas más grandes */
+    }
+}
 
+/* Ajuste para pantallas muy pequeñas */
+@media (max-width: 480px) {
+    .contact-cards-scroll {
+        padding: 15px 10px; /* Reduce aún más el padding */
+    }
+    
+    .contact-card {
+        max-width: 100%; /* Usa todo el ancho disponible */
+    }
+}
 /*--------------------------
  * 4.6 Secciones Comunes
  *--------------------------*/
@@ -825,5 +886,370 @@ footer {
     .btn {
         padding: 10px 20px;
         font-size: 14px;
+    }
+}
+
+/* Modificación para policy-links horizontal */
+.policy-links {
+    margin: 15px 0;
+}
+
+.policy-links ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.policy-links ul li {
+    margin: 0;
+    padding: 0;
+}
+
+.policy-links ul li a {
+    font-size: 12px;
+    color: #666;
+    transition: color 0.3s ease;
+}
+
+.policy-links ul li a:hover {
+    color: var(--primary-color);
+}
+
+/* Estilos para la nueva sección de contacto horizontal */
+.contact-cards-scroll {
+    display: flex;
+    overflow-x: auto;
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+    gap: 20px;
+    scrollbar-width: none; /* Para Firefox */
+    -ms-overflow-style: none; /* Para Internet Explorer y Edge */
+    padding: 30px; /* Mismo padding que tiene en el index */
+}
+
+.contact-cards-scroll::-webkit-scrollbar {
+    display: none; /* Para Chrome, Safari y Opera */
+}
+
+.contact-card {
+    flex: 0 0 auto;
+    width: 350px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid transparent;
+    background-clip: padding-box, border-box;
+    background-origin: padding-box, border-box;
+    background-image: linear-gradient(to right, #fff, #fff), 
+                    linear-gradient(90deg, #ffcc00, #e6b800);
+}
+
+.contact-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.card-inner {
+    padding: 24px;
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.card-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 16px;
+    color: #ffffff;
+}
+
+.whatsapp-icon {
+    background-color:  rgba(255, 204, 0, 0.836);;
+}
+
+.location-icon {
+    background-color:  rgba(255, 204, 0, 0.836);;
+}
+
+.contact-icon {
+    background-color:  rgba(255, 204, 0, 0.836);;
+}
+
+
+.card-title h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 4px;
+}
+
+.card-title p {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Características de WhatsApp */
+.card-features {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.feature {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    background-color: #f5f5f5;
+    padding: 12px;
+    border-radius: 8px;
+}
+
+
+.feature span {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Información de contacto */
+.card-contact-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f5f5f5;
+    padding: 16px;
+    border-radius: 8px;
+}
+
+.info-label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 4px;
+}
+
+.info-value {
+    font-size: 13px;
+    color: #666;
+}
+
+.card-action-btn {
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.whatsapp-btn {
+    background-color: #25D366;
+    color: white !important;
+    box-shadow: 0 0 15px rgba(37, 211, 102, 0.3);
+}
+
+.whatsapp-btn:hover {
+    background-color: #128C7E;
+}
+
+/* Mapa */
+.card-map {
+    height: 160px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 16px;
+}
+
+.card-map iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Detalles de ubicación */
+.location-details {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.detail-item {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #666;
+}
+
+.detail-item i {
+    margin-right: 8px;
+    color: #999;
+    width: 16px;
+    text-align: center;
+}
+
+/* Otros contactos */
+.other-contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.contact-method {
+    display: flex;
+    align-items: center;
+    background-color: #f5f5f5;
+    padding: 12px;
+    border-radius: 8px;
+}
+
+.method-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 12px;
+}
+
+.phone-icon {
+    background-color: rgb(255, 255, 255);
+}
+
+.email-icon {
+    background-color: rgb(255, 255, 255);
+}
+
+.chat-icon {
+    background-color: rgb(255, 255, 255);
+}
+
+.method-label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 2px;
+}
+
+.method-value {
+    font-size: 13px;
+    color: #666;
+}
+
+/* Redes sociales */
+.social-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    border-radius: 8px;
+    color: white !important;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.facebook-btn {
+    background-color: #1877F2;
+}
+
+.instagram-btn {
+    background-color: #E4405F;
+}
+
+.whatsapp-btn-alt {
+    background-color: #25D366;
+}
+
+.linkedin-btn {
+    background-color: #0A66C2;
+}
+
+.social-btn:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+/* Sección de FAQ */
+.faq-section {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 24px;
+    margin-bottom: 40px;
+}
+
+.faq-section h2 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.faq-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.faq-item {
+    padding-left: 16px;
+    border-left-width: 4px;
+    border-left-style: solid;
+}
+
+.faq-item-1 {
+    border-left-color: rgba(255, 204, 0, 0.664);
+    
+}
+
+.faq-item-2 {
+    border-left-color: rgba(255, 204, 0, 0.664);
+}
+
+.faq-item-3 {
+    border-left-color: rgba(255, 204, 0, 0.664);
+}
+
+.faq-item h3 {
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.faq-item p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+    .faq-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-card {
+        width: 300px;
     }
 }

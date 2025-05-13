@@ -180,7 +180,7 @@
 }
 
 .feature-icon {
-    background-color: rgba(255, 204, 0, 0.15);
+    background-color: rgba(255, 204, 0, 0.479);
     border-radius: 50%;
     width: 50px;
     height: 50px;
@@ -261,7 +261,8 @@
 
 .services-grid-redesign {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    /* grid-template-columns: repeat(4, 1fr); */
     gap: 30px;
     margin-top: 50px;
 }
@@ -320,6 +321,17 @@
     margin-bottom: 20px;
 }
 
+@media (max-width: 992px) {
+    .services-grid-redesign {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .services-grid-redesign {
+        grid-template-columns: 1fr;
+    }
+}
 /*===========================================================
  * 5. SECCIÓN ESTADÍSTICAS
  *===========================================================*/
