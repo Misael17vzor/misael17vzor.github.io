@@ -42,6 +42,11 @@ h3 {
 }
 
 p {
+    text-align: justify;
+    hyphens: auto;             /* Permite hifenización automática */
+    word-break: normal;        /* Comportamiento normal de ruptura de palabras */
+    text-justify: inter-word;  /* Justifica ajustando espacios entre palabras */
+    text-rendering: optimizeLegibility; /* Mejora legibilidad */
     margin-bottom: 1rem;
 }
 
@@ -251,6 +256,16 @@ footer {
 
 /* Ajuste para vista móvil */
 @media (max-width: 768px) {
+
+    p {
+        text-align: justify;
+    hyphens: auto;             /* Permite hifenización automática */
+    word-break: normal;        /* Comportamiento normal de ruptura de palabras */
+    text-justify: inter-word;  /* Justifica ajustando espacios entre palabras */
+    text-rendering: optimizeLegibility; /* Mejora legibilidad */
+        margin-bottom: 1rem;
+        text-align: justify;
+    }
     .whatsapp-button {
         bottom: 70px; /* Movido más arriba en pantallas móviles */
         right: 20px; /* Ligeramente más cerca del borde */
