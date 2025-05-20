@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
         showTab(index);
         // Reiniciar el temporizador al hacer clic
         clearInterval(tabInterval);
-        tabInterval = setInterval(rotateTabs, 5000);
+        tabInterval = setInterval(rotateTabs,10000);
         });
     });
 
@@ -36,5 +36,5 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // Cambio automático de pestañas
-    let tabInterval = setInterval(rotateTabs, 5000);
+    let tabInterval = setInterval(rotateTabs, 10000);
     });

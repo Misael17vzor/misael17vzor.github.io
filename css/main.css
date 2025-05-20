@@ -622,6 +622,13 @@ footer {
     margin: 0 auto 60px;
 }
 
+
+.section-label-container {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
 .section-label {
     display: inline-block;
     background-color: rgba(255, 204, 0, 0.15);
@@ -629,7 +636,7 @@ footer {
     padding: 8px 16px;
     border-radius: 999px;
     font-weight: 600;
-    margin-bottom: 1rem;
+    margin: 0 auto 1rem auto;
 }
 
 .section-title {
@@ -1267,4 +1274,52 @@ footer {
     .contact-card {
         width: 300px;
     }
+}
+/* Animaciones básicas para elementos */
+.reveal-element {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal-element.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Variantes con diferentes retrasos */
+.reveal-delay-1 {
+    transition-delay: 0.1s;
+}
+
+.reveal-delay-2 {
+    transition-delay: 0.2s;
+}
+
+.reveal-delay-3 {
+    transition-delay: 0.3s;
+}
+
+.reveal-delay-4 {
+    transition-delay: 0.4s;
+}
+
+/* Estilos específicos para las pestañas */
+.tabs-wrapper {
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.tab-pane:not(.active) .reveal-element {
+    opacity: 0 !important;
+    transform: translateY(20px) !important;
+}
+
+.tab-pane.active .reveal-element.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Asegura que la transición de las pestañas sea suave */
+.tabs-content {
+    min-height: 200px; /* Asegúrate de que este valor es adecuado */
 }

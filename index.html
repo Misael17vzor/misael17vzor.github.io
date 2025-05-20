@@ -14,7 +14,7 @@
 <header>
     <div class="header-container">
         <div class="logo">
-            <a href="#home">
+            <a href="/">
                 <img src="/img/Logo.png" alt="Logo">
             </a>
         </div>
@@ -24,7 +24,7 @@
         </button>
         <nav class="main-nav">
             <ul>
-                <li><a href="#home" class="active">Inicio</a></li>
+                <li><a href="/" class="active">Inicio</a></li>
                 <li><a href="#about">Nosotros</a></li>
                 <li><a href="#servicios">Servicios</a></li>
                 <li><a href="#proyectos">Proyectos</a></li>
@@ -38,15 +38,25 @@
     <!-- Hero Section mejorada con animación original -->
     <div class="hero" id="home">
         <div class="hero-content">
-            <div class="split-text-container">
-                <span class="text-part left">ROC'S</span>
-                <span class="text-part right highlight">Servicios</span>
-                <span class="text-part left">Mineros</span>
+            <div class="hero-brand-container">
+                <!-- Logo a la izquierda -->
+                <div class="hero-logo">
+                    <img src="img/Logo.png" alt="ROC'S Logo">
+                </div>
+
+                <!-- Texto a la derecha -->
+                <div class="split-text-container">
+                    <span class="text-part highlight">ROC'S</span>
+                    <span class="text-part">Servicios</span>
+                    <span class="text-part highlight">Mineros</span>
+                </div>
             </div>
+
             <p class="hero-description">
                 Soluciones mineras integrales con tecnología de vanguardia y excelencia operativa para maximizar el
                 valor de sus activos.
             </p>
+
             <div class="hero-buttons">
                 <a href="#servicios" class="btn btn-primary">
                     Nuestros Servicios
@@ -63,6 +73,9 @@
 
     <!-- Sección About -->
     <section class="about-section" id="about">
+        <div class="section-label-container">
+            <div class="section-label">Sobre Nosotros</div>
+        </div>
         <div class="about-grid">
             <div class="about-image-container">
                 <div class="about-image">
@@ -74,7 +87,7 @@
                 </div>
             </div>
             <div class="about-content">
-                <div class="section-label">Sobre Nosotros</div>
+
                 <h2 class="section-title">Excelencia e innovación en servicios mineros integrales</h2>
                 <p class="section-text">
                     En <strong>ROC'S Servicios Mineros</strong>, combinamos experiencia técnica especializada con
@@ -726,6 +739,7 @@
     <script src="/js/tab.js"></script>
     <script src="/js/tab.js"></script>
     <script src="/js/stadistics.js"></script>
+    <script src="/js/scroll-animations.js"></script>
 </body>
 
 </html>
